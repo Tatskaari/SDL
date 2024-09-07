@@ -890,22 +890,6 @@ const linux_options = [_]SdlOption{
         },
         .system_libs = &.{ },
     },
-    .{
-        .name = "audio_driver_pulse",
-        .desc = "enable the pulse audio driver",
-        .default = true,
-        .sdl_configs = &.{ "SDL_AUDIO_DRIVER_PULSEAUDIO" },
-        .src_files = &.{ "src/audio/pulseaudio/SDL_pulseaudio.c" },
-        .system_libs = &.{ "pulse" },
-    },
-    .{
-        .name = "audio_driver_alsa",
-        .desc = "enable the alsa audio driver",
-        .default = false,
-        .sdl_configs = &.{ "SDL_AUDIO_DRIVER_ALSA" },
-        .src_files = &.{ "src/audio/alsa/SDL_alsa_audio.c" },
-        .system_libs = &.{ "alsa" },
-    },
 };
 
 fn applyOptions(
